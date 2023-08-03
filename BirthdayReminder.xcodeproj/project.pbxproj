@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B36DCA92A7B132400ABE880 /* BirthdayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCA82A7B132400ABE880 /* BirthdayItem.swift */; };
+		5B36DCAD2A7BE1BF00ABE880 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */; };
+		5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */; };
+		5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCB02A7BE26300ABE880 /* AboutView.swift */; };
 		5BFA58C82A782D92008E8515 /* BirthdayReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */; };
 		5BFA58CA2A782D92008E8515 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA58C92A782D92008E8515 /* ContentView.swift */; };
 		5BFA58CC2A782D93008E8515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA58CB2A782D93008E8515 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B36DCA82A7B132400ABE880 /* BirthdayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayItem.swift; sourceTree = "<group>"; };
+		5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysView.swift; sourceTree = "<group>"; };
+		5B36DCB02A7BE26300ABE880 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		5BFA58C42A782D92008E8515 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayReminderApp.swift; sourceTree = "<group>"; };
 		5BFA58C92A782D92008E8515 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +79,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B36DCA72A7B12B700ABE880 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA58C92A782D92008E8515 /* ContentView.swift */,
+				5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */,
+				5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */,
+				5B36DCA82A7B132400ABE880 /* BirthdayItem.swift */,
+				5B36DCB02A7BE26300ABE880 /* AboutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5BFA58BB2A782D92008E8515 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +114,8 @@
 		5BFA58C62A782D92008E8515 /* BirthdayReminder */ = {
 			isa = PBXGroup;
 			children = (
+				5B36DCA72A7B12B700ABE880 /* Views */,
 				5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */,
-				5BFA58C92A782D92008E8515 /* ContentView.swift */,
 				5BFA58CB2A782D93008E8515 /* Assets.xcassets */,
 				5BFA58CD2A782D93008E8515 /* Preview Content */,
 			);
@@ -257,7 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */,
+				5B36DCA92A7B132400ABE880 /* BirthdayItem.swift in Sources */,
 				5BFA58CA2A782D92008E8515 /* ContentView.swift in Sources */,
+				5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */,
+				5B36DCAD2A7BE1BF00ABE880 /* TabBarView.swift in Sources */,
 				5BFA58C82A782D92008E8515 /* BirthdayReminderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +444,8 @@
 				DEVELOPMENT_TEAM = HMZ6QQVQ93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Birthday Reminder";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +475,8 @@
 				DEVELOPMENT_TEAM = HMZ6QQVQ93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Birthday Reminder";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
