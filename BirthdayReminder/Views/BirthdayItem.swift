@@ -18,7 +18,7 @@ struct BirthdayItem: View {
             Image(systemName: "person.crop.circle.fill")
                 .font(.system(size: 40))
             VStack(alignment: .leading) {
-                Text(firstName + " " + lastName)
+                Text("\(firstName) \(lastName)")
                     .font(.title3)
                     .bold()
                 Text(birthDate)
@@ -27,7 +27,7 @@ struct BirthdayItem: View {
                 HStack() {
                     Text("🎂")
                         .font(.largeTitle)
-                    Text(String(age) + " ans")
+                    Text("\(age) years old")
                         .font(.title3)
                         .bold()
                     

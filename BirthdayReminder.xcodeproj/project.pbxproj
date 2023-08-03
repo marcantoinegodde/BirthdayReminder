@@ -11,6 +11,7 @@
 		5B36DCAD2A7BE1BF00ABE880 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */; };
 		5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */; };
 		5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCB02A7BE26300ABE880 /* AboutView.swift */; };
+		5B36DCB52A7C28AE00ABE880 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B36DCB72A7C28AE00ABE880 /* Localizable.strings */; };
 		5BFA58C82A782D92008E8515 /* BirthdayReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */; };
 		5BFA58CA2A782D92008E8515 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA58C92A782D92008E8515 /* ContentView.swift */; };
 		5BFA58CC2A782D93008E8515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA58CB2A782D93008E8515 /* Assets.xcassets */; };
@@ -42,6 +43,8 @@
 		5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysView.swift; sourceTree = "<group>"; };
 		5B36DCB02A7BE26300ABE880 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		5B36DCB62A7C28AE00ABE880 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5B36DCB82A7C28B400ABE880 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BFA58C42A782D92008E8515 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayReminderApp.swift; sourceTree = "<group>"; };
 		5BFA58C92A782D92008E8515 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 		5BFA58BB2A782D92008E8515 = {
 			isa = PBXGroup;
 			children = (
+				5B36DCB72A7C28AE00ABE880 /* Localizable.strings */,
 				5BFA58C62A782D92008E8515 /* BirthdayReminder */,
 				5BFA58D72A782D93008E8515 /* BirthdayReminderTests */,
 				5BFA58E12A782D93008E8515 /* BirthdayReminderUITests */,
@@ -233,6 +237,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 5BFA58BB2A782D92008E8515;
 			productRefGroup = 5BFA58C52A782D92008E8515 /* Products */;
@@ -252,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BFA58CF2A782D93008E8515 /* Preview Assets.xcassets in Resources */,
+				5B36DCB52A7C28AE00ABE880 /* Localizable.strings in Resources */,
 				5BFA58CC2A782D93008E8515 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +323,18 @@
 			targetProxy = 5BFA58DF2A782D93008E8515 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B36DCB72A7C28AE00ABE880 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B36DCB62A7C28AE00ABE880 /* en */,
+				5B36DCB82A7C28B400ABE880 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5BFA58E62A782D93008E8515 /* Debug */ = {

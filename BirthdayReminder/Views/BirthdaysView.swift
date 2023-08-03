@@ -12,7 +12,7 @@ struct BirthdaysView: View {
         VStack(alignment: .leading) {
 
             HStack(alignment: .top) {
-                Text("Anniversaires")
+                Text("Birthdays")
                     .font(.largeTitle)
                     .bold()
             Spacer()

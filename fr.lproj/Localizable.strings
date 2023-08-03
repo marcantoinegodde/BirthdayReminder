@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  BirthdayReminder
+
+  Created by Marc-Antoine Godde on 03/08/2023.
+  
+*/
+
+// Tabs titles
+"Birthdays" = "Anniversaires";
+"About" = "À propos";
+
+// Birthday Item
+"%lld years old" = "%lld ans";

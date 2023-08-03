@@ -12,7 +12,7 @@ struct AboutView: View {
         VStack(alignment: .leading) {
             
             HStack(alignment: .top) {
-                Text("À propos")
+                Text("About")
                     .font(.largeTitle)
                     .bold()
                 Spacer()
