@@ -15,7 +15,7 @@ struct BirthdayItem: View {
     
     var body: some View {
         HStack() {
-            Image(systemName: "person.crop.circle.fill")
+            Image(systemName: "person.crop.circle")
                 .font(.system(size: 40))
             VStack(alignment: .leading) {
                 Text("\(firstName) \(lastName)")
@@ -35,7 +35,7 @@ struct BirthdayItem: View {
             
         }
         .padding()
-        .background(Color(UIColor.systemGray5))
+        .background(Color(.secondarySystemGroupedBackground))
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .padding()
         

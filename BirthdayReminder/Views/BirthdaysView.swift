@@ -26,6 +26,7 @@ struct BirthdaysView: View {
                     }
             }
         }
+        .background(Color(.systemGroupedBackground))
     }
 }
 
