@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct BirthdayItem: View {
-    @State private var firstName = "John"
-    @State private var lastName = "Doe"
-    @State private var birthDate = "01/01/2000"
-    @State private var age = 23
+    var firstName: String
+    var lastName: String
+    var image: Image?
+    var birthDate: String
+    var age: Int?
     
     var body: some View {
         HStack() {
-            Image(systemName: "person.crop.circle")
-                .font(.system(size: 40))
+            if let image = image {
+                image
+                    .resizable()
+                    .clipShape(Circle())
+                    .frame(width: 50, height: 50, alignment: .center)
+            } else {
+                Image(systemName: "person.crop.circle")
+                    .resizable()
+                    .frame(width: 50, height: 50, alignment: .center)
+            }
             VStack(alignment: .leading) {
                 Text("\(firstName) \(lastName)")
                     .font(.title3)
@@ -24,14 +33,15 @@ struct BirthdayItem: View {
                 Text(birthDate)
             }
             Spacer()
-                HStack() {
-                    Text("🎂")
-                        .font(.largeTitle)
+            HStack() {
+                Text("🎂")
+                    .font(.largeTitle)
+                if let age = age {
                     Text("\(age) years old")
                         .font(.title3)
                         .bold()
-                    
                 }
+            }
             
         }
         .padding()
@@ -44,6 +54,6 @@ struct BirthdayItem: View {
 
 struct BirthdayItem_Previews: PreviewProvider {
     static var previews: some View {
-        BirthdayItem()
+        BirthdayItem(firstName: "John", lastName: "Doe", birthDate: "01/01/2000", age: 23)
     }
 }

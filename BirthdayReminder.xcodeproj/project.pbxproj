@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B12B0F32A81463D00841B90 /* ContactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12B0F22A81463D00841B90 /* ContactData.swift */; };
 		5B36DCA92A7B132400ABE880 /* BirthdayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCA82A7B132400ABE880 /* BirthdayItem.swift */; };
 		5B36DCAD2A7BE1BF00ABE880 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */; };
 		5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B12B0F22A81463D00841B90 /* ContactData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactData.swift; sourceTree = "<group>"; };
 		5B36DCA82A7B132400ABE880 /* BirthdayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayItem.swift; sourceTree = "<group>"; };
 		5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B12B0ED2A811A0D00841B90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B12B0F22A81463D00841B90 /* ContactData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5B36DCA72A7B12B700ABE880 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		5BFA58C62A782D92008E8515 /* BirthdayReminder */ = {
 			isa = PBXGroup;
 			children = (
+				5B12B0ED2A811A0D00841B90 /* Model */,
 				5B36DCA72A7B12B700ABE880 /* Views */,
 				5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */,
 				5BFA58CB2A782D93008E8515 /* Assets.xcassets */,
@@ -284,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */,
+				5B12B0F32A81463D00841B90 /* ContactData.swift in Sources */,
 				5B36DCA92A7B132400ABE880 /* BirthdayItem.swift in Sources */,
 				5BFA58CA2A782D92008E8515 /* ContentView.swift in Sources */,
 				5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */,
@@ -464,6 +476,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Birthday Reminder";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Birthday Reminder uses your contacts information to help you wish them their next birthday.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -495,6 +508,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Birthday Reminder";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Birthday Reminder uses your contacts information to help you wish them their next birthday.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
