@@ -43,22 +43,25 @@ struct Contact: Identifiable, Hashable {
 }
 
 class ContactData: ObservableObject {
-    
     @Published var contacts = [Contact]()
     
     func fetchContacts() {
-        DispatchQueue.main.async {
-            self.contacts.removeAll()
+        self.contacts.removeAll()
+        
+        DispatchQueue.global(qos: .userInitiated).async {
             let store = CNContactStore()
             
             let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactThumbnailImageDataKey, CNContactBirthdayKey] as [CNKeyDescriptor]
             let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch)
+            
             do {
                 try store.enumerateContacts(with: fetchRequest, usingBlock: { contact, _ in
-                    
                     if let birthday = contact.birthday {
-                        self.contacts.append(Contact(firstName: contact.givenName, lastName: contact.familyName, imageData: contact.thumbnailImageData, birthday: birthday))
+                        let newContact = Contact(firstName: contact.givenName, lastName: contact.familyName, imageData: contact.thumbnailImageData, birthday: birthday)
                         
+                        DispatchQueue.main.async {
+                            self.contacts.append(newContact)
+                        }
                     }
                 })
                 
