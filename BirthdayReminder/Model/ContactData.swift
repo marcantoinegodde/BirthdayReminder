@@ -61,6 +61,9 @@ class ContactData: ObservableObject {
                         
                         DispatchQueue.main.async {
                             self.contacts.append(newContact)
+                            self.contacts.sort {
+                                daysDifferenceFromToday(dateComponents: $0.birthday) < daysDifferenceFromToday(dateComponents: $1.birthday)
+                            }
                         }
                     }
                 })
@@ -71,4 +74,25 @@ class ContactData: ObservableObject {
             }
         }
     }
+}
+
+func daysDifferenceFromToday(dateComponents: DateComponents) -> Int {
+    let calendar = Calendar.current
+    let currentDate = Date()
+    
+    let todayDateComponents = calendar.dateComponents([.day, .month], from: currentDate)
+    let targetDateComponents = DateComponents(calendar: calendar, month: dateComponents.month, day: dateComponents.day)
+    
+    let date1 = calendar.date(from: todayDateComponents)!
+    let date2 = calendar.date(from: targetDateComponents)!
+    
+    // Calculate the difference in days between the two dates
+    let components = calendar.dateComponents([.day], from: date1, to: date2)
+    var daysDifference = components.day!
+    
+    if daysDifference < 0 {
+        daysDifference += 365
+    }
+    
+    return daysDifference
 }
