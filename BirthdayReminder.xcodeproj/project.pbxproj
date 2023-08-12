@@ -15,6 +15,9 @@
 		5B36DCB52A7C28AE00ABE880 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B36DCB72A7C28AE00ABE880 /* Localizable.strings */; };
 		5BE90F9E2A86E0E900970192 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90F9D2A86E0E900970192 /* WelcomeView.swift */; };
 		5BE90FA22A86F8D400970192 /* ContactPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */; };
+		5BE90FA42A879DB500970192 /* NotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90FA32A879DB500970192 /* NotificationPermissionView.swift */; };
+		5BF7D6912A883B340010C276 /* NotificationSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7D6902A883B340010C276 /* NotificationSkeleton.swift */; };
+		5BF7D6932A88413F0010C276 /* NotificationSkeletonAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7D6922A88413F0010C276 /* NotificationSkeletonAssembly.swift */; };
 		5BFA58C82A782D92008E8515 /* BirthdayReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */; };
 		5BFA58CA2A782D92008E8515 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA58C92A782D92008E8515 /* ContentView.swift */; };
 		5BFA58CC2A782D93008E8515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA58CB2A782D93008E8515 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		5B36DCB82A7C28B400ABE880 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BE90F9D2A86E0E900970192 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPermissionView.swift; sourceTree = "<group>"; };
+		5BE90FA32A879DB500970192 /* NotificationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionView.swift; sourceTree = "<group>"; };
+		5BF7D6902A883B340010C276 /* NotificationSkeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSkeleton.swift; sourceTree = "<group>"; };
+		5BF7D6922A88413F0010C276 /* NotificationSkeletonAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSkeletonAssembly.swift; sourceTree = "<group>"; };
 		5BFA58C42A782D92008E8515 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayReminderApp.swift; sourceTree = "<group>"; };
 		5BFA58C92A782D92008E8515 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +120,9 @@
 			children = (
 				5BE90F9D2A86E0E900970192 /* WelcomeView.swift */,
 				5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */,
+				5BE90FA32A879DB500970192 /* NotificationPermissionView.swift */,
+				5BF7D6902A883B340010C276 /* NotificationSkeleton.swift */,
+				5BF7D6922A88413F0010C276 /* NotificationSkeletonAssembly.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -308,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE90FA42A879DB500970192 /* NotificationPermissionView.swift in Sources */,
 				5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */,
 				5B12B0F32A81463D00841B90 /* ContactData.swift in Sources */,
 				5B36DCA92A7B132400ABE880 /* BirthdayItem.swift in Sources */,
@@ -316,6 +326,8 @@
 				5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */,
 				5B36DCAD2A7BE1BF00ABE880 /* TabBarView.swift in Sources */,
 				5BFA58C82A782D92008E8515 /* BirthdayReminderApp.swift in Sources */,
+				5BF7D6932A88413F0010C276 /* NotificationSkeletonAssembly.swift in Sources */,
+				5BF7D6912A883B340010C276 /* NotificationSkeleton.swift in Sources */,
 				5BE90FA22A86F8D400970192 /* ContactPermissionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,9 +502,9 @@
 				DEVELOPMENT_TEAM = HMZ6QQVQ93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Birthday Reminder";
+				INFOPLIST_KEY_CFBundleDisplayName = Birthdays;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSContactsUsageDescription = "Birthday Reminder uses your contacts information to help you wish them their next birthday.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Birthdays uses your contacts information to help you wish them their next birthday.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -522,9 +534,9 @@
 				DEVELOPMENT_TEAM = HMZ6QQVQ93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Birthday Reminder";
+				INFOPLIST_KEY_CFBundleDisplayName = Birthdays;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSContactsUsageDescription = "Birthday Reminder uses your contacts information to help you wish them their next birthday.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Birthdays uses your contacts information to help you wish them their next birthday.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

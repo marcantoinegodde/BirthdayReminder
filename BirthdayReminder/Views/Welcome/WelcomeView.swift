@@ -14,7 +14,12 @@ struct WelcomeView: View {
                 
                 Spacer()
                 
-                Text("Welcome to Birthday Reminder")
+                Image("Icon")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                
+                Text("Welcome to Birthdays")
                     .bold()
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
@@ -30,12 +35,12 @@ struct WelcomeView: View {
                         VStack(alignment: .leading) {
                             Text("See next occuring birthdays")
                                 .bold()
-                            Text("Get your contacts birthday information at the same place.")
+                            Text("Get your contacts birthday information at a glance.")
                                 .foregroundColor(.gray)
                         }
                         .padding(.leading)
                     }
-                    .padding()
+                    .padding(.horizontal)
                     
                     HStack() {
                         Image(systemName: "bell.badge.fill")
@@ -50,7 +55,7 @@ struct WelcomeView: View {
                         }
                         .padding(.leading)
                     }
-                    .padding()
+                    .padding(.horizontal)
                     
                     HStack() {
                         Image(systemName: "message.fill")
@@ -65,9 +70,9 @@ struct WelcomeView: View {
                         }
                         .padding(.leading)
                     }
-                    .padding()
-                    
+                    .padding(.horizontal)
                 }
+                .padding(.vertical)
                 
                 Spacer()
                 
@@ -77,11 +82,12 @@ struct WelcomeView: View {
                 })
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
-                .font(Font.headline.weight(.medium))
+                .font(.headline)
                 .padding()
                 
             }
             .padding()
+            .background(Color(.secondarySystemFill))
         }
     }
 }

@@ -9,16 +9,17 @@ import SwiftUI
 
 struct ContactPermissionView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Need Permissions")
-                .bold()
-                .font(.largeTitle)
-                .padding(.bottom)
-            
-            Text("In order for you to get birthdays information, you need to give contacts permssions.")
-                .foregroundColor(Color(.secondaryLabel))
-                .padding(.vertical)
-            
+        NavigationStack {
+            VStack(alignment: .leading) {
+                Text("Need Permissions")
+                    .bold()
+                    .font(.largeTitle)
+                    .padding(.bottom)
+                
+                Text("In order for you to get birthdays information, you need to give contacts permssions.")
+                    .foregroundColor(Color(.secondaryLabel))
+                    .padding(.vertical)
+                
                 HStack {
                     Image(systemName: "person.crop.circle").foregroundColor(Color.blue)
                         .font(.system(size: 40))
@@ -47,26 +48,24 @@ struct ContactPermissionView: View {
                 .padding()
                 .background(Color(.secondarySystemGroupedBackground))
                 .cornerRadius(15)
-            
-            
-            Spacer()
-            
-            Button(action: {
-                print("Continue")
-            }, label: {
-                Text("Continue")
-                    .frame(maxWidth: .infinity)
-            })
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-            .font(Font.headline.weight(.medium))
+                
+                
+                Spacer()
+                
+                NavigationLink(destination: NotificationPermissionView(), label: {
+                    Text("Continue")
+                        .frame(maxWidth: .infinity)
+                })
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+                .font(.headline)
+                .padding()
+            }
             .padding()
+            .background(Color(.systemGroupedBackground))
         }
-        .padding()
-        .background(Color(.systemGroupedBackground))
     }
 }
-
 
 
 struct ContactPermissionView_Previews: PreviewProvider {
