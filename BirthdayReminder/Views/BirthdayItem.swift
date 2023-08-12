@@ -34,8 +34,9 @@ struct BirthdayItem: View {
             }
             Spacer()
             HStack() {
-                Text("🎂")
-                    .font(.largeTitle)
+                Image(systemName: "gift.fill")
+                    .renderingMode(.original)
+                    .font(.system(size: 25))
                 if let age = age {
                     Text("\(age) years old")
                         .font(.title3)

@@ -13,6 +13,8 @@
 		5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */; };
 		5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCB02A7BE26300ABE880 /* AboutView.swift */; };
 		5B36DCB52A7C28AE00ABE880 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B36DCB72A7C28AE00ABE880 /* Localizable.strings */; };
+		5BE90F9E2A86E0E900970192 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90F9D2A86E0E900970192 /* WelcomeView.swift */; };
+		5BE90FA22A86F8D400970192 /* ContactPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */; };
 		5BFA58C82A782D92008E8515 /* BirthdayReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */; };
 		5BFA58CA2A782D92008E8515 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA58C92A782D92008E8515 /* ContentView.swift */; };
 		5BFA58CC2A782D93008E8515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA58CB2A782D93008E8515 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		5B36DCB02A7BE26300ABE880 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		5B36DCB62A7C28AE00ABE880 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5B36DCB82A7C28B400ABE880 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5BE90F9D2A86E0E900970192 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPermissionView.swift; sourceTree = "<group>"; };
 		5BFA58C42A782D92008E8515 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFA58C72A782D92008E8515 /* BirthdayReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayReminderApp.swift; sourceTree = "<group>"; };
 		5BFA58C92A782D92008E8515 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 		5B36DCA72A7B12B700ABE880 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5BE90F9C2A86E0CC00970192 /* Welcome */,
 				5BFA58C92A782D92008E8515 /* ContentView.swift */,
 				5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */,
 				5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */,
@@ -102,6 +107,15 @@
 				5B36DCB02A7BE26300ABE880 /* AboutView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5BE90F9C2A86E0CC00970192 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				5BE90F9D2A86E0E900970192 /* WelcomeView.swift */,
+				5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		5BFA58BB2A782D92008E8515 = {
@@ -297,10 +311,12 @@
 				5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */,
 				5B12B0F32A81463D00841B90 /* ContactData.swift in Sources */,
 				5B36DCA92A7B132400ABE880 /* BirthdayItem.swift in Sources */,
+				5BE90F9E2A86E0E900970192 /* WelcomeView.swift in Sources */,
 				5BFA58CA2A782D92008E8515 /* ContentView.swift in Sources */,
 				5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */,
 				5B36DCAD2A7BE1BF00ABE880 /* TabBarView.swift in Sources */,
 				5BFA58C82A782D92008E8515 /* BirthdayReminderApp.swift in Sources */,
+				5BE90FA22A86F8D400970192 /* ContactPermissionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
