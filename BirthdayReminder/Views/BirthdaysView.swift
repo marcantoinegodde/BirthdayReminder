@@ -11,21 +11,12 @@ struct BirthdaysView: View {
     @StateObject var contactData = ContactData()
     
     var body: some View {
-        VStack(alignment: .leading) {
-            
-            HStack(alignment: .top) {
-                Text("Birthdays")
-                    .font(.largeTitle)
-                    .bold()
-                Spacer()
-            }.padding()
-            
-            Spacer()
-            
+        NavigationView {
             ScrollView {
                 ForEach(contactData.contacts) {contact in
                     BirthdayItem(firstName: contact.firstName, lastName: contact.lastName, image: contact.image(), birthDate: contact.birthDate(), age: contact.age())
                 }
+                .navigationTitle("Birthdays")
             }
         }
         .background(Color(.systemGroupedBackground))
