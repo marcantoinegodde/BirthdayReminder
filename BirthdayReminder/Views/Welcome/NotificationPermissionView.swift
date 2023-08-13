@@ -55,7 +55,7 @@ struct NotificationPermissionView: View {
                     }, label: {
                         Text("Later")
                     })
-                    .padding(.top)
+                    .padding(.vertical)
                     .font(.headline)
                 }
             }
