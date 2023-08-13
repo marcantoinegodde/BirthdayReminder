@@ -9,21 +9,25 @@ import SwiftUI
 
 struct NotificationSkeletonAssembly: View {
     var body: some View {
-            VStack {
-                Text("08:30")
-                    .foregroundColor(Color(.secondaryLabel))
-                    .font(.system(size: 60))
-                    .padding(.top)
-                
-                NotificationSkeleton()
-                    .shadow(radius: 20)
-                
-                Spacer()
-            }
-            .padding()
-            .frame(width: 350, height: 400)
-            .background(Color(.systemFill))
-            .clipShape(RoundedRectangle(cornerRadius: 10))
+        VStack {
+            Text("08:30")
+                .foregroundColor(Color(.secondaryLabel))
+                .font(.system(size: 60))
+                .padding(.top)
+            
+            NotificationSkeleton()
+                .shadow(radius: 20)
+            
+            Spacer()
+        }
+        .padding()
+        .frame(width: 350, height: 300)
+        .background(Color(.systemFill))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .offset(y: 50)
+        .clipped()
+        .offset(y: -25)
+        .frame(width: 350, height: 250)
     }
 }
 

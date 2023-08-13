@@ -9,31 +9,25 @@ import SwiftUI
 
 struct NotificationPermissionView: View {
     var body: some View {
-        ZStack {
-            Color(.systemFill)
-                .ignoresSafeArea()
-            VStack() {
-                NotificationSkeletonAssembly()
-                    .padding(.top)
-                Spacer()
-            }
-        }
-        .overlay(alignment: .bottom, content: {
+        VStack(spacing: 0) {
+            NotificationSkeletonAssembly()
+                .frame(maxWidth: .infinity)
+                .background(Color(.systemFill))
+            
+            
             ZStack {
                 Color.primary
                     .colorInvert()
                     .ignoresSafeArea()
                 
                 VStack() {
-                    Spacer()
-                    
-                    Text("Get informed of upcomming birthdays")
+                    Text("Get notified of upcoming birthdays")
                         .multilineTextAlignment(.center)
                         .bold()
                         .font(.largeTitle)
                         .padding()
                     
-                    Text("Receive notifications about upcomming birthdays of your contacts so you never forget to wish one.")
+                    Text("Receive notifications about your contacts' upcoming birthdays so you never forget to wish them.")
                         .multilineTextAlignment(.center)
                         .padding()
                     
@@ -59,8 +53,7 @@ struct NotificationPermissionView: View {
                     .font(.headline)
                 }
             }
-            .frame(height: 450)
-        })
+        }
     }
 }
 

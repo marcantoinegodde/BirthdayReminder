@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var shouldPresentSheet = true
     
     var body: some View {
         TabBarView()
+            .sheet(isPresented: $shouldPresentSheet, content: {
+                WelcomeView()
+            })
     }
 }
 
