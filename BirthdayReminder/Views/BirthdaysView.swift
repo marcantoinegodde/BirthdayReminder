@@ -12,20 +12,25 @@ struct BirthdaysView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                ForEach(contactData.contacts) {contact in
-                    BirthdayItem(firstName: contact.firstName, lastName: contact.lastName, image: contact.image(), birthDate: contact.birthDate(), age: contact.age())
+            ZStack {
+                Color(.systemGroupedBackground).ignoresSafeArea()
+                ScrollView {
+                    ForEach(contactData.contacts) {contact in
+                        BirthdayItem(firstName: contact.firstName, lastName: contact.lastName, image: contact.image(), birthDate: contact.birthDate(), age: contact.age())
+                    }
+                    
                 }
                 .navigationTitle("Birthdays")
+                .onAppear(perform: contactData.fetchContacts)
             }
         }
-        .background(Color(.systemGroupedBackground))
-        .onAppear(perform: contactData.fetchContacts)
     }
 }
 
 struct BirthdaysView_Previews: PreviewProvider {
     static var previews: some View {
-        BirthdaysView()
+        let previewContactData = ContactData()
+        previewContactData.contacts = [Contact(firstName: "John", lastName: "Doe", birthday: DateComponents(calendar: Calendar(identifier: .gregorian), year: 2000, month: 01, day: 01))]
+        return BirthdaysView(contactData: previewContactData)
     }
 }
