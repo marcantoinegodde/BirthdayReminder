@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContactPermissionView: View {
+    @StateObject var contactsPermissionManager = ContactsPermissionManager()
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
@@ -37,13 +39,34 @@ struct ContactPermissionView: View {
                         
                     }
                     Spacer()
-                    Button(action: {}, label: {
-                        Text("Allow")
-                            .bold()
-                            .textCase(.uppercase)
+                    Button(action: contactsPermissionManager.requestAuthorization, label: {
+                        if contactsPermissionManager.contactsAuthorization == .authorized {
+                            Text("Allowed")
+                                .bold()
+                                .textCase(.uppercase)
+                        }
+                        else {
+                            Text("Allow")
+                                .bold()
+                                .textCase(.uppercase)
+                        }
                     })
                     .buttonStyle(.bordered)
                     .cornerRadius(30)
+                    .disabled(contactsPermissionManager.contactsAuthorization == .authorized)
+                    .alert(Text("Allow Contacts Access"), isPresented: $contactsPermissionManager.showAlert, actions: {
+                        Button("Cancel", role: .cancel, action: {})
+                        Button("Settings", action: {
+                            if let bundleId = Bundle.main.bundleIdentifier,
+                               let url = URL(string: "\(UIApplication.openSettingsURLString)&path=APPNAME/\(bundleId)")
+                            {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                            
+                        })
+                    }, message: {
+                        Text("Cannot display birthdays of your contacts without access. Press settings to update or cancel to deny access.")
+                    })
                 }
                 .padding()
                 .background(Color(.secondarySystemGroupedBackground))

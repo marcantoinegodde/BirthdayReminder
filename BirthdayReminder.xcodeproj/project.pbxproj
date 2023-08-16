@@ -13,6 +13,7 @@
 		5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */; };
 		5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCB02A7BE26300ABE880 /* AboutView.swift */; };
 		5B36DCB52A7C28AE00ABE880 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B36DCB72A7C28AE00ABE880 /* Localizable.strings */; };
+		5B637F0B2A8CEBAB009BD282 /* ContactsPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B637F0A2A8CEBAB009BD282 /* ContactsPermissionManager.swift */; };
 		5BE90F9E2A86E0E900970192 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90F9D2A86E0E900970192 /* WelcomeView.swift */; };
 		5BE90FA22A86F8D400970192 /* ContactPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */; };
 		5BE90FA42A879DB500970192 /* NotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90FA32A879DB500970192 /* NotificationPermissionView.swift */; };
@@ -52,6 +53,7 @@
 		5B36DCB02A7BE26300ABE880 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		5B36DCB62A7C28AE00ABE880 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5B36DCB82A7C28B400ABE880 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5B637F0A2A8CEBAB009BD282 /* ContactsPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionManager.swift; sourceTree = "<group>"; };
 		5BE90F9D2A86E0E900970192 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPermissionView.swift; sourceTree = "<group>"; };
 		5BE90FA32A879DB500970192 /* NotificationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				5B12B0F22A81463D00841B90 /* ContactData.swift */,
+				5B637F0A2A8CEBAB009BD282 /* ContactsPermissionManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				5B36DCA92A7B132400ABE880 /* BirthdayItem.swift in Sources */,
 				5BE90F9E2A86E0E900970192 /* WelcomeView.swift in Sources */,
 				5BFA58CA2A782D92008E8515 /* ContentView.swift in Sources */,
+				5B637F0B2A8CEBAB009BD282 /* ContactsPermissionManager.swift in Sources */,
 				5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */,
 				5B36DCAD2A7BE1BF00ABE880 /* TabBarView.swift in Sources */,
 				5BFA58C82A782D92008E8515 /* BirthdayReminderApp.swift in Sources */,
