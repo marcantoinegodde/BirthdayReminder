@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NotificationPermissionView: View {
+    @StateObject var notificationsPermissionManager = NotificationsPermissionManager()
+    @EnvironmentObject var welcomeManager: WelcomeManager
+    
     var body: some View {
         VStack(spacing: 0) {
             NotificationSkeletonAssembly()
@@ -34,7 +37,7 @@ struct NotificationPermissionView: View {
                     Spacer()
                     
                     Button(action: {
-                        print("Enable notifications")
+                        notificationsPermissionManager.requestAuthorization()
                     }, label: {
                         Text("Enable notifications")
                             .frame(maxWidth: .infinity)
@@ -45,7 +48,7 @@ struct NotificationPermissionView: View {
                     .padding(.horizontal)
                     
                     Button(action: {
-                        print("Later")
+                        welcomeManager.dismiss()
                     }, label: {
                         Text("Later")
                     })

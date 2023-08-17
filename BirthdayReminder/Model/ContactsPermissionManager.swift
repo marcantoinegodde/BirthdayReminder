@@ -46,5 +46,4 @@ class ContactsPermissionManager: ObservableObject {
             }
         }
     }
-    
 }

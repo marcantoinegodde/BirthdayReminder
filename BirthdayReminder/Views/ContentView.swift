@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var shouldPresentSheet = true
+    @StateObject var welcomeManager = WelcomeManager()
     
     var body: some View {
         TabBarView()
-            .sheet(isPresented: $shouldPresentSheet, content: {
+            .sheet(isPresented: $welcomeManager.isPresented, content: {
                 WelcomeView()
+                    .environmentObject(welcomeManager)
             })
     }
 }
