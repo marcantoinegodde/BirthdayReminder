@@ -46,6 +46,19 @@ struct NotificationPermissionView: View {
                     .controlSize(.large)
                     .font(.headline)
                     .padding(.horizontal)
+                    .alert(Text("Allow Notifications Access"), isPresented: $notificationsPermissionManager.showAlert, actions: {
+                        Button("Cancel", role: .cancel, action: {})
+                        Button("Settings", action: {
+                            if let bundleId = Bundle.main.bundleIdentifier,
+                               let url = URL(string: "\(UIApplication.openSettingsURLString)&path=APPNAME/\(bundleId)")
+                            {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                            
+                        })
+                    }, message: {
+                        Text("Press settings to update your notifications preferences or cancel to deny access.")
+                    })
                     
                     Button(action: {
                         welcomeManager.dismiss()
