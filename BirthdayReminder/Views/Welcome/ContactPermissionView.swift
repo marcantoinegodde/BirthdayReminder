@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContactPermissionView: View {
     @StateObject var contactsPermissionManager = ContactsPermissionManager()
+    @StateObject var notificationsManager = NotificationsPermissionManager()
+    @EnvironmentObject var welcomeManager: WelcomeManager
     
     var body: some View {
         NavigationStack {
@@ -75,14 +77,27 @@ struct ContactPermissionView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: NotificationPermissionView(), label: {
-                    Text("Continue")
-                        .frame(maxWidth: .infinity)
-                })
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
-                .font(.headline)
-                .padding()
+                if notificationsManager.notificationsAuthorization == .authorized {
+                    Button(action: {
+                        welcomeManager.dismiss()
+                    }, label: {
+                        Text("Continue")
+                            .frame(maxWidth: .infinity)
+                    })
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                    .font(.headline)
+                    .padding()
+                } else {
+                    NavigationLink(destination: NotificationPermissionView(), label: {
+                        Text("Continue")
+                            .frame(maxWidth: .infinity)
+                    })
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                    .font(.headline)
+                    .padding()
+                }
             }
             .padding()
             .background(Color(.systemGroupedBackground))
