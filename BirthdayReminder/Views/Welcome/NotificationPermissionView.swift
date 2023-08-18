@@ -37,7 +37,7 @@ struct NotificationPermissionView: View {
                     Spacer()
                     
                     Button(action: {
-                        notificationsPermissionManager.requestAuthorization()
+                        notificationsPermissionManager.requestAuthorization(completion: welcomeManager.dismiss)
                     }, label: {
                         Text("Enable notifications")
                             .frame(maxWidth: .infinity)

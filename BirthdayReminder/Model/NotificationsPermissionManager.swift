@@ -33,7 +33,7 @@ class NotificationsPermissionManager: ObservableObject {
         }
     }
     
-    func requestAuthorization() {
+    func requestAuthorization(completion: @escaping () -> Void) {
         center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
             DispatchQueue.main.async {
                 if granted {
@@ -42,6 +42,7 @@ class NotificationsPermissionManager: ObservableObject {
                 else {
                     self.showAlert = true
                 }
+                completion()
             }
         }
     }
