@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5B12B0F32A81463D00841B90 /* ContactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12B0F22A81463D00841B90 /* ContactData.swift */; };
-		5B332EF02A8EDB6B00C7C9B5 /* WelcomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B332EEF2A8EDB6B00C7C9B5 /* WelcomeManager.swift */; };
 		5B36DCA92A7B132400ABE880 /* BirthdayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCA82A7B132400ABE880 /* BirthdayItem.swift */; };
 		5B36DCAD2A7BE1BF00ABE880 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */; };
 		5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */; };
 		5B36DCB12A7BE26300ABE880 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36DCB02A7BE26300ABE880 /* AboutView.swift */; };
 		5B36DCB52A7C28AE00ABE880 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B36DCB72A7C28AE00ABE880 /* Localizable.strings */; };
 		5B637F0B2A8CEBAB009BD282 /* ContactsPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B637F0A2A8CEBAB009BD282 /* ContactsPermissionManager.swift */; };
+		5B731B3A2A917A3900FCE05D /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B731B392A917A3900FCE05D /* AppStorageKeys.swift */; };
 		5B75BD872A8D94EC0034F512 /* NotificationsPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75BD862A8D94EC0034F512 /* NotificationsPermissionManager.swift */; };
 		5BE90F9E2A86E0E900970192 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90F9D2A86E0E900970192 /* WelcomeView.swift */; };
 		5BE90FA22A86F8D400970192 /* ContactPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */; };
@@ -49,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		5B12B0F22A81463D00841B90 /* ContactData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactData.swift; sourceTree = "<group>"; };
-		5B332EEF2A8EDB6B00C7C9B5 /* WelcomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeManager.swift; sourceTree = "<group>"; };
 		5B36DCA82A7B132400ABE880 /* BirthdayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayItem.swift; sourceTree = "<group>"; };
 		5B36DCAC2A7BE1BF00ABE880 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		5B36DCAE2A7BE1FF00ABE880 /* BirthdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysView.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		5B36DCB62A7C28AE00ABE880 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5B36DCB82A7C28B400ABE880 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5B637F0A2A8CEBAB009BD282 /* ContactsPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionManager.swift; sourceTree = "<group>"; };
+		5B731B392A917A3900FCE05D /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
 		5B75BD862A8D94EC0034F512 /* NotificationsPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPermissionManager.swift; sourceTree = "<group>"; };
 		5BE90F9D2A86E0E900970192 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		5BE90FA12A86F8D400970192 /* ContactPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPermissionView.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				5B12B0F22A81463D00841B90 /* ContactData.swift */,
 				5B637F0A2A8CEBAB009BD282 /* ContactsPermissionManager.swift */,
 				5B75BD862A8D94EC0034F512 /* NotificationsPermissionManager.swift */,
-				5B332EEF2A8EDB6B00C7C9B5 /* WelcomeManager.swift */,
+				5B731B392A917A3900FCE05D /* AppStorageKeys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,8 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE90FA42A879DB500970192 /* NotificationPermissionView.swift in Sources */,
+				5B731B3A2A917A3900FCE05D /* AppStorageKeys.swift in Sources */,
 				5B36DCAF2A7BE1FF00ABE880 /* BirthdaysView.swift in Sources */,
-				5B332EF02A8EDB6B00C7C9B5 /* WelcomeManager.swift in Sources */,
 				5B12B0F32A81463D00841B90 /* ContactData.swift in Sources */,
 				5B36DCA92A7B132400ABE880 /* BirthdayItem.swift in Sources */,
 				5BE90F9E2A86E0E900970192 /* WelcomeView.swift in Sources */,

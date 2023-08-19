@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NotificationPermissionView: View {
     @StateObject var notificationsPermissionManager = NotificationsPermissionManager()
-    @AppStorage(WelcomeSheet.showWelcomeSheet.rawValue) var showWelcomeSheet: Bool = true
+    @AppStorage(AppStorageKeys.showWelcomeSheet.rawValue) var showWelcomeSheet: Bool = true
     
     var body: some View {
         VStack(spacing: 0) {
@@ -37,7 +37,9 @@ struct NotificationPermissionView: View {
                     Spacer()
                     
                     Button(action: {
-                        notificationsPermissionManager.requestAuthorization(completion: dismissWelcomeSheet)
+                        notificationsPermissionManager.requestAuthorization(completion: {
+                            showWelcomeSheet = false
+                        })
                     }, label: {
                         Text("Enable notifications")
                             .frame(maxWidth: .infinity)
@@ -61,7 +63,7 @@ struct NotificationPermissionView: View {
                     })
                     
                     Button(action: {
-                        dismissWelcomeSheet()
+                        showWelcomeSheet = false
                     }, label: {
                         Text("Later")
                     })

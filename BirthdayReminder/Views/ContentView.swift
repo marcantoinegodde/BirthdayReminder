@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage(WelcomeSheet.showWelcomeSheet.rawValue) var showWelcomeSheet: Bool = true
+    @AppStorage(AppStorageKeys.showWelcomeSheet.rawValue) var showWelcomeSheet: Bool = true
+    @StateObject private var contactData = ContactData()
     
     var body: some View {
         TabBarView()
-            .sheet(isPresented: $showWelcomeSheet, content: {
+            .environmentObject(contactData)
+            .sheet(isPresented: $showWelcomeSheet, onDismiss: contactData.fetchContacts, content: {
                 WelcomeView()
             })
     }

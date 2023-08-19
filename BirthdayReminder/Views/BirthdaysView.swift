@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct BirthdaysView: View {
-    @StateObject var contactData = ContactData()
+    @EnvironmentObject var contactData: ContactData
+    @AppStorage(AppStorageKeys.showWelcomeSheet.rawValue) var showWelcomeSheet: Bool = true
     
     var body: some View {
         NavigationView {
@@ -21,7 +22,11 @@ struct BirthdaysView: View {
                     
                 }
                 .navigationTitle("Birthdays")
-                .onAppear(perform: contactData.fetchContacts)
+                .onAppear(perform: {
+                    if showWelcomeSheet == false {
+                        contactData.fetchContacts()
+                    }
+                })
             }
         }
     }
@@ -31,6 +36,7 @@ struct BirthdaysView_Previews: PreviewProvider {
     static var previews: some View {
         let previewContactData = ContactData()
         previewContactData.contacts = [Contact(firstName: "John", lastName: "Doe", birthday: DateComponents(calendar: Calendar(identifier: .gregorian), year: 2000, month: 01, day: 01))]
-        return BirthdaysView(contactData: previewContactData)
+        return BirthdaysView()
+            .environmentObject(previewContactData)
     }
 }

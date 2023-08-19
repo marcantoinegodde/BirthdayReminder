@@ -44,31 +44,33 @@ class ContactData: ObservableObject {
     @Published var contacts = [Contact]()
     
     func fetchContacts() {
-        self.contacts.removeAll()
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            let store = CNContactStore()
+        if CNContactStore.authorizationStatus(for: .contacts) == .authorized {
+            self.contacts.removeAll()
             
-            let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactThumbnailImageDataKey, CNContactBirthdayKey] as [CNKeyDescriptor]
-            let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch)
-            
-            do {
-                try store.enumerateContacts(with: fetchRequest, usingBlock: { contact, _ in
-                    if let birthday = contact.birthday {
-                        let newContact = Contact(firstName: contact.givenName, lastName: contact.familyName, imageData: contact.thumbnailImageData, birthday: birthday)
-                        
-                        DispatchQueue.main.async {
-                            self.contacts.append(newContact)
-                            self.contacts.sort {
-                                self.daysDifferenceFromToday(dateComponents: $0.birthday) < self.daysDifferenceFromToday(dateComponents: $1.birthday)
+            DispatchQueue.global(qos: .userInitiated).async {
+                let store = CNContactStore()
+                
+                let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactThumbnailImageDataKey, CNContactBirthdayKey] as [CNKeyDescriptor]
+                let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch)
+                
+                do {
+                    try store.enumerateContacts(with: fetchRequest, usingBlock: { contact, _ in
+                        if let birthday = contact.birthday {
+                            let newContact = Contact(firstName: contact.givenName, lastName: contact.familyName, imageData: contact.thumbnailImageData, birthday: birthday)
+                            
+                            DispatchQueue.main.async {
+                                self.contacts.append(newContact)
+                                self.contacts.sort {
+                                    self.daysDifferenceFromToday(dateComponents: $0.birthday) < self.daysDifferenceFromToday(dateComponents: $1.birthday)
+                                }
                             }
                         }
-                    }
-                })
-                
-                print("Fetched contacts: \(self.contacts)")
-            } catch {
-                print("Failed to fetch contact, error: \(error)")
+                    })
+                    
+                    print("Fetched contacts: \(self.contacts)")
+                } catch {
+                    print("Failed to fetch contact, error: \(error)")
+                }
             }
         }
     }

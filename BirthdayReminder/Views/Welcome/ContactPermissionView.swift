@@ -10,6 +10,7 @@ import SwiftUI
 struct ContactPermissionView: View {
     @StateObject var contactsPermissionManager = ContactsPermissionManager()
     @StateObject var notificationsManager = NotificationsPermissionManager()
+    @AppStorage(AppStorageKeys.showWelcomeSheet.rawValue) var showWelcomeSheet: Bool = true
     
     var body: some View {
         NavigationStack {
@@ -78,7 +79,7 @@ struct ContactPermissionView: View {
                 
                 if notificationsManager.notificationsAuthorization == .authorized {
                     Button(action: {
-                        dismissWelcomeSheet()
+                        showWelcomeSheet = false
                     }, label: {
                         Text("Continue")
                             .frame(maxWidth: .infinity)
