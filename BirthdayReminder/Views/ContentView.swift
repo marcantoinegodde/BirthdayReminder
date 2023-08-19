@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var welcomeManager = WelcomeManager()
+    @AppStorage(WelcomeSheet.showWelcomeSheet.rawValue) var showWelcomeSheet: Bool = true
     
     var body: some View {
         TabBarView()
-            .sheet(isPresented: $welcomeManager.isPresented, content: {
+            .sheet(isPresented: $showWelcomeSheet, content: {
                 WelcomeView()
-                    .environmentObject(welcomeManager)
             })
     }
 }

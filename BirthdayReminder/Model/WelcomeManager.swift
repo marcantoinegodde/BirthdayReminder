@@ -7,10 +7,10 @@
 
 import Foundation
 
-class WelcomeManager: ObservableObject {
-    @Published var isPresented: Bool = true
-    
-    func dismiss() {
-        self.isPresented = false
-    }
+enum WelcomeSheet: String {
+    case showWelcomeSheet
+}
+
+func dismissWelcomeSheet() {
+    UserDefaults.standard.set(false, forKey: WelcomeSheet.showWelcomeSheet.rawValue)
 }
