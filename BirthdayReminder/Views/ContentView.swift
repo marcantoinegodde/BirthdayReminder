@@ -16,6 +16,7 @@ struct ContentView: View {
             .environmentObject(contactData)
             .sheet(isPresented: $showWelcomeSheet, onDismiss: contactData.fetchContacts, content: {
                 WelcomeView()
+                    .interactiveDismissDisabled()
             })
     }
 }
