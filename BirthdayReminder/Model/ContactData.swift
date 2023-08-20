@@ -42,6 +42,7 @@ struct Contact: Identifiable, Hashable {
 
 class ContactData: ObservableObject {
     @Published var contacts = [Contact]()
+    @Published var showAlert: Bool = false
     
     func fetchContacts() {
         if CNContactStore.authorizationStatus(for: .contacts) == .authorized {
@@ -72,6 +73,8 @@ class ContactData: ObservableObject {
                     print("Failed to fetch contact, error: \(error)")
                 }
             }
+        } else {
+            self.showAlert = true
         }
     }
     

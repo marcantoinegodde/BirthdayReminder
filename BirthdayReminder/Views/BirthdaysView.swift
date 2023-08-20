@@ -27,6 +27,19 @@ struct BirthdaysView: View {
                         contactData.fetchContacts()
                     }
                 })
+                .alert(Text("Allow Contacts Access"), isPresented: $contactData.showAlert, actions: {
+                    Button("Cancel", role: .cancel, action: {})
+                    Button("Settings", action: {
+                        if let bundleId = Bundle.main.bundleIdentifier,
+                           let url = URL(string: "\(UIApplication.openSettingsURLString)&path=APPNAME/\(bundleId)")
+                        {
+                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        }
+                        
+                    })
+                }, message: {
+                    Text("Cannot display birthdays of your contacts without access. Press settings to update or cancel to deny access.")
+                })
             }
         }
     }
